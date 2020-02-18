@@ -21,10 +21,10 @@ const HeaderWrapper = styled.header`
   h1 {
     color: var(--dark-color);
     font-size: 1.4rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
     span {
-      /* color: var(--secondary-green); */
+      color: var(--terry-five);
     }
   }
 `

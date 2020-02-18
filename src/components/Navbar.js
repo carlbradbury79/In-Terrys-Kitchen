@@ -34,7 +34,7 @@ const Nav = styled.nav`
   }
 
   ul li a:hover {
-    color: gray;
+    color: var(--terry-five);
     /* color: var(--terry-red-color); */
   }
 `

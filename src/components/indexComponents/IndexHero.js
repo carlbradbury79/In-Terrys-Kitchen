@@ -25,7 +25,7 @@ const Hero = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   /* height: 100vh; */
   position: relative;
@@ -65,17 +65,20 @@ const Content = styled.div`
 
   h1 {
     font-size: 60px;
-    /* color: #d5d95f;
-    border: 1px #242424 solid; */
+    color: #fff;
+    /* border: 1px #242424 solid; */
     animation: ${fade} 1s ease-out;
+  }
+  h2 {
+    color: #fff;
   }
 `
 
 const BookButton = styled(Link)`
   padding: 30px;
   /* background: #d5d95f; */
-  border: 2px var(--dark-color) solid;
-  color: var(--dark-color);
+  border: 2px #fff solid;
+  color: #fff;
   text-decoration: none;
   margin: 50px 0;
 

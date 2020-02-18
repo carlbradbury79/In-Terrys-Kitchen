@@ -1,65 +1,12 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-const About = styled.section`
-  background: #f5e0dc;
-  /* background: var(--terry-three); */
-  padding: 128px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 991px) and (min-width: 0) {
-    padding: 64px 64px;
-    flex-direction: column;
-  }
-`
-
-const AboutContainer = styled.div`
-  color: var(--dark-color);
-  padding: 1rem;
-  margin: 1rem;
-  width: 45%;
-
-  @media (max-width: 991px) and (min-width: 0) {
-    width: 100%;
-  }
-
-  p {
-    line-height: 1.6;
-    font-size: 1.2rem;
-    color: var(--dark-color);
-  }
-
-  h2 {
-    color: var(--dark-color);
-    font-size: 70px;
-    margin: 1rem 0;
-  }
-`
-
-const AboutButton = styled(Link)`
-  padding: 30px;
-  /* background: #d5d95f; */
-  border: 2px var(--dark-color) solid;
-  color: var(--dark-color);
-  text-decoration: none;
-
-  &:hover {
-    color: #fff;
-    background: var(--dark-color);
-  }
-`
-
-const StyledImage = styled(Img)`
-  @media (max-width: 991px) and (min-width: 0) {
-    width: 100%;
-    margin: 20px;
-  }
-`
+import {
+  StyledSection,
+  StyledContainer,
+  StyledButton,
+  StyledImage,
+} from "./IndexStyledSections"
 
 const IndexAbout = () => {
   const data = useStaticQuery(graphql`
@@ -77,23 +24,26 @@ const IndexAbout = () => {
       }
     }
   `)
-  console.log(data)
   return (
-    <About>
-      <AboutContainer>
+    <StyledSection>
+      <StyledContainer color="var(--terry-four)">
         <h2>About</h2>
         <p>
-          Terry's Kitchen has a rich background spanning several decades of
-          education and work through the States and Europe
+          My culinary passion and profession spans several decades of education
+          and work, but was propelled when I went to the French countryside of
+          the Loire Valley and the Poitou-Charente to study with the late Chef
+          Robert Reynolds of Le Trou Restaurant in San Francisco.
         </p>
-      </AboutContainer>
+      </StyledContainer>
       <StyledImage
         fixed={data.placeholderImage.childImageSharp.fixed}
         alt="Terry"
       />
 
-      <AboutButton to="/about">Read More...</AboutButton>
-    </About>
+      <StyledButton to="/about" color="var(--terry-four)">
+        Read More...
+      </StyledButton>
+    </StyledSection>
   )
 }
 

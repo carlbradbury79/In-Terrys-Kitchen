@@ -9,12 +9,14 @@ html {
   --light-color: #ddd;
   /* --terry-red-color: #f23207;
   --terry-orange-color: #f27405; */
-  --terry-one: #cc9535;
-  --terry-two: #d68938;
-  --terry-three: #bf6c3b;
-  --terry-four: #d65b38;
-  --terry-five: #cc4035;
+  --terry-one: #d97904;
+  --terry-two: #594020;
+  --terry-three: #bf925a;
+  --terry-four: #f25c05;
+  --terry-five: #bf2604;
+
   height: 100%;
+  /* Color Theme Swatches in Hex */
 }
 body {
   box-sizing: border-box;
