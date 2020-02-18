@@ -4,17 +4,20 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import IndexHero from "../components/indexComponents/IndexHero"
+import IndexAbout from "../components/indexComponents/IndexAbout"
+import IndexClasses from "../components/indexComponents/IndexClasses"
+
+import Fade from "react-reveal/Fade"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Fade bottom>
+      <IndexHero />
+      <IndexAbout />
+      <IndexClasses />
+    </Fade>
   </Layout>
 )
 

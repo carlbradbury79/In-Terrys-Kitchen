@@ -1,10 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `In Terry's Kitchen`,
+    description: `Learn to cook.`,
+    author: `@carlbradburyjs`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
