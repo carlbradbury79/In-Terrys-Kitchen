@@ -6,6 +6,7 @@ import {
   StyledContainer,
   StyledButton,
   StyledImage,
+  ImageHack,
 } from "./IndexStyledSections"
 
 const IndexClasses = () => {
@@ -17,7 +18,7 @@ const IndexClasses = () => {
           fluid {
             ...GatsbyImageSharpFluid
           }
-          fixed(width: 400) {
+          fixed(width: 350) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -38,11 +39,12 @@ const IndexClasses = () => {
           Mexico.
         </p>
       </StyledContainer>
-      <StyledImage
-        fixed={data.placeholderImage.childImageSharp.fixed}
-        alt="Terry"
-      />
-
+      <ImageHack>
+        <StyledImage
+          fluid={data.placeholderImage.childImageSharp.fluid}
+          alt="Terry"
+        />
+      </ImageHack>
       <StyledButton color="var(--terry-one)" to="/classes">
         Read More...
       </StyledButton>

@@ -6,6 +6,7 @@ import {
   StyledContainer,
   StyledButton,
   StyledImage,
+  ImageHack,
 } from "./IndexStyledSections"
 
 const IndexAbout = () => {
@@ -14,10 +15,10 @@ const IndexAbout = () => {
       placeholderImage: file(relativePath: { eq: "terry.jpg" }) {
         id
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
-          fixed(width: 400) {
+          fixed(width: 350) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -35,10 +36,12 @@ const IndexAbout = () => {
           Robert Reynolds of Le Trou Restaurant in San Francisco.
         </p>
       </StyledContainer>
-      <StyledImage
-        fixed={data.placeholderImage.childImageSharp.fixed}
-        alt="Terry"
-      />
+      <ImageHack>
+        <StyledImage
+          fluid={data.placeholderImage.childImageSharp.fluid}
+          alt="Terry"
+        />
+      </ImageHack>
 
       <StyledButton to="/about" color="var(--terry-four)">
         Read More...

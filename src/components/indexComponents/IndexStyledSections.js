@@ -60,8 +60,17 @@ export const StyledButton = styled(Link)`
 `
 
 export const StyledImage = styled(Img)`
+  width: 70%;
   @media (max-width: 991px) and (min-width: 0) {
     width: 100%;
     margin: 20px;
   }
+`
+
+export const ImageHack = styled.div`
+  /* display: block; */
+  flex-basis: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `
