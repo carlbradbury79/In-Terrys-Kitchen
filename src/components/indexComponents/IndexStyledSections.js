@@ -10,7 +10,7 @@ export const StyledSection = styled.section`
   align-items: center;
   justify-content: space-between;
   /* border-top: 2px var(--terry-one) solid; */
-  border-bottom: 2px var(--terry-one) solid;
+  /* border-bottom: 2px var(--terry-one) solid; */
 
   @media (max-width: 991px) and (min-width: 0) {
     padding: 1rem 1rem;

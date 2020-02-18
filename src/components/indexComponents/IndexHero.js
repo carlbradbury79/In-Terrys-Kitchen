@@ -84,7 +84,7 @@ const BookButton = styled(Link)`
 
   &:hover {
     color: #fff;
-    background: var(--dark-color);
+    background: var(--terry-five);
   }
 `
 
