@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import Hamburger from "./navComponents/Hamburger"
 import OverlayMenu from "./navComponents/OverlayMenu"
 
 const Layout = ({ children }) => {
@@ -32,16 +31,8 @@ const Layout = ({ children }) => {
     console.log(menuOpen)
   }
 
-  // let overlayMenu
-
-  // if (menuOpen) {
-  //   overlayMenu = <OverlayMenu />
-  // }
-
   return (
     <>
-      {/* <Hamburger handleOverlayMenu={handleOverlayMenu} /> */}
-      {/* <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} /> */}
       <Header
         siteTitle={data.site.siteMetadata.title}
         handleOverlayMenu={handleOverlayMenu}
